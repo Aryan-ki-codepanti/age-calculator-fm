@@ -39,6 +39,8 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+
+    padding: 2em;
 }
 
 .container {
@@ -164,4 +166,38 @@ input[type="number"] {
 }
 .results > div > span:nth-child(2) {
     color: var(--off_black);
+}
+
+/* mobile size */
+@media screen and (max-width: 650px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .calculator-box {
+        padding: 1em;
+        width: 70%;
+    }
+
+    .inputs {
+        gap: 1em;
+    }
+    .inputs input {
+        max-width: 80px;
+    }
+
+    .arrow {
+        width: 50px;
+    }
+    .arrow img {
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .inputs {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
