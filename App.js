@@ -56,17 +56,17 @@ const errorChecks = (d, m, y) => {
     y = parseInt(y);
     let today = new Date();
     let dt = new Date(`${m}-${d}-${y}`);
-    if (!d || d < 0) {
+    if (!d || d < 1) {
         inpDay.classList.add("error");
         inpDay.querySelector("p").innerText = "Must be a valid day";
         err = true;
     }
-    if (!m || m < 0) {
+    if (!m || m < 1) {
         inpMonth.classList.add("error");
         inpMonth.querySelector("p").innerText = "Must be a valid month";
         err = true;
     }
-    if (!y || y < 0) {
+    if (!y || y < 1) {
         inpYear.classList.add("error");
         inpYear.querySelector("p").innerText = "Must be a valid year";
         err = true;
