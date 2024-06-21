@@ -13,6 +13,19 @@ const reset = () => {
         "- -";
 };
 
+const invalidDate = (d, m, y) => {
+    if ([4, 6, 9, 11].includes(m) && d > 30) return true;
+
+    if (
+        m === 2 &&
+        ((y % 100 === 0 && y % 400 === 0 && d > 29) ||
+            (y % 4 === 0 && d > 29) ||
+            d > 28)
+    )
+        return true;
+    return false;
+};
+
 const errorChecks = (d, m, y) => {
     const inpDay = document.querySelector(".input-day");
     const inpMonth = document.querySelector(".input-month");
@@ -62,7 +75,7 @@ const errorChecks = (d, m, y) => {
     if (err) return err;
 
     // invalid date check
-    if (dt == "Invalid Date") {
+    if (dt == "Invalid Date" || invalidDate(d, m, y)) {
         inpDay.classList.add("error");
         inpDay.querySelector("p").innerText = "Must be a valid day";
         inpMonth.classList.add("error");
