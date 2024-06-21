@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* cols */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --red: hsl(0, 100%, 67%);
+
+    --white: hsl(0, 0%, 100%);
+    --off_white: hsl(0, 0%, 94%);
+    --light_grey: hsl(0, 0%, 86%);
+    --smokey_grey: hsl(0, 1%, 44%);
+    --off_black: hs hsl(0, 0%, 8%);
+}
+
+/* their */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* my */
+
+body {
+    background-color: var(--off_white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.calculator-box {
+    background-color: var(--white);
+    width: 600px;
+    padding: 3em;
+    border-radius: 10px;
+    border-bottom-right-radius: 140px;
+}
+
+/* inputs */
+.inputs {
+    display: flex;
+    gap: 4em;
+}
+
+.inputs > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs span {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: var(--smokey_grey);
+}
+
+.inputs input::placeholder {
+    color: var(--smokey_grey);
+    font-weight: bolder;
+}
+.inputs input {
+    max-width: 100px;
+    font-size: 1.2rem;
+    padding: 0.4em 0.7em;
+    border-radius: 5px;
+    border: 1px solid var(--off_white);
+}
+
+/* error states */
+
+/* Separator */
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 1em;
+}
+
+.line {
+    flex-grow: 1;
+}
+.line hr {
+    border: 1px solid var(--off_white);
+}
+.arrow {
+    background-color: var(--purple);
+    border-radius: 50%;
+    width: 70px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow img {
+    aspect-ratio: 1;
+    width: 35px;
+}
+
+/* results */
+
+.results > div > span {
+    font-size: 4rem;
+    font-weight: 800;
+}
+.results > div > span:first-child {
+    color: var(--purple);
+    padding-right: 0.2em;
+}
+.results > div > span:nth-child(2) {
+    color: var(--off_black);
+}
