@@ -55,6 +55,18 @@ body {
 }
 
 /* inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .inputs {
     display: flex;
     gap: 4em;
@@ -119,6 +131,10 @@ body {
 .line hr {
     border: 1px solid var(--off_white);
 }
+.arrow:hover {
+    transform: scale(1.2);
+}
+
 .arrow {
     background-color: var(--purple);
     border-radius: 50%;
@@ -127,6 +143,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
+    transition: transform 0.09s ease-in-out;
 }
 .arrow img {
     aspect-ratio: 1;
