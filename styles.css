@@ -96,6 +96,9 @@ body {
 
 .inputs > .error p {
     color: var(--red);
+}
+.inputs p {
+    color: white;
     font-weight: 300;
     font-size: 0.6rem;
     font-style: italic;
