@@ -38,7 +38,6 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [https://github.com/Aryan-ki-codepanti/age-calculator-fm](https://github.com/Aryan-ki-codepanti/age-calculator-fm)
--   todo
 -   Live Site URL: [https://aryan-ki-codepanti.github.io/age-calculator-fm/](https://aryan-ki-codepanti.github.io/age-calculator-fm/)
 
 ## My process
